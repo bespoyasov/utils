@@ -1,16 +1,17 @@
-import isString from '../types/isString'
+import isString from '../../types/isString'
 
 /**
  * Removes every character from giver string except numbers, comas and points
  * returned value is a number with or without point
+ * if given argument is not a string returns 0
  * @param {String} str 
  * @return {Number} 
  */
-export const cleanNumericString = (str='') => {
-  if (!isString(str)) return ''
+export const numericStringToNumber = (str='') => {
+  if (!isString(str)) return 0
 
   let clean = str
-    .replace(/[^0-9\.\,]/g, '')
+    .replace(/[^0-9\.\,\-]/g, '')
     .replace(/\,/g, '.')
     .replace(/\.(?=.*\.)/, '')
     
@@ -22,4 +23,4 @@ export const cleanNumericString = (str='') => {
   return +`${integer}.${fraction}`
 }
 
-export default cleanNumericString
+export default numericStringToNumber

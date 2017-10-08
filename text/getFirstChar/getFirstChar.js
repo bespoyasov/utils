@@ -1,4 +1,4 @@
-import isString from '../types/isString'
+import isString from '../../types/isString'
 
 /**
  * Returns first character of tgiven string
@@ -6,9 +6,8 @@ import isString from '../types/isString'
  * @return {String}
  */
 const getFirstChar = str => 
-  !!str 
-  && isString(str) 
-  && str.charAt(0) 
-  || ''
+  !!str && isString(str) 
+    ? str.charAt(0) 
+    : ''
 
 export default getFirstChar

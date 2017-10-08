@@ -1,4 +1,4 @@
-import isString from '../types/isString'
+import isString from '../../types/isString'
 
 /**
  * Removes html tags from given string
@@ -6,6 +6,8 @@ import isString from '../types/isString'
  * @return {String}
  */
 const clearHtmlTags = (str='') =>
-  str.replace(/<\/?[^>]+(>|$)/g, '')
+  isString(str)
+  ? str.replace(/<\/?[^>]+(>|$)/g, '')
+  : ''
 
 export default clearHtmlTags

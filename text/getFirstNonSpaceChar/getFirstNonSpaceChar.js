@@ -1,4 +1,4 @@
-import isString from '../types/isString'
+import isString from '../../types/isString'
 
 /**
  * Returns first non space character of given string
@@ -6,9 +6,8 @@ import isString from '../types/isString'
  * @return {String}
  */
 const getFirstNonSpaceChar = str => 
-  !!str 
-  && isString(str) 
-  && str.replace(/\s/g, '').charAt(0) 
-  || ''
+  !!str && isString(str) 
+    ? str.replace(/\s/g, '').charAt(0) 
+    : ''
 
 export default getFirstNonSpaceChar
