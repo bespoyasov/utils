@@ -1,4 +1,4 @@
-import isNumberOrString from '../types/isNumberOrString'
+import isNumberOrString from '../../types/isNumberOrString'
 
 /**
  * Removes all the whitespaces and converts to lower case
@@ -6,12 +6,11 @@ import isNumberOrString from '../types/isNumberOrString'
  * @return {String}
  */
 const stringToSearchable = str => 
-  !!str 
-  && isNumberOrString(str)
-  && str
+  !!str && isNumberOrString(str)
+    ? str
       .toString()
       .toLowerCase()
       .replace(/\s/g, '')
-  || ''
+    : ''
 
 export default stringToSearchable

@@ -17,7 +17,6 @@ const isKey = (keyName, config={}) => event => {
     case 'backspace': return keyCode === 8
     case 'tab': return keyCode === 9
     case 'escape': return keyCode === 27
-    case '9': return keyCode === 57
     default: return false
   }
 }

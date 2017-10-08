@@ -1,7 +1,5 @@
 # Tools
 
-Some helper functions
+Helper functions
 
-## TODO
-
-Add tests
+Finished on `removePunctuation`

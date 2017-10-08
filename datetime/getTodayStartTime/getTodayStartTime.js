@@ -2,7 +2,7 @@
  * Returns today's start timestamp
  * @return {Number}
  */
-const getTodayTimestamp = () => {
+const getTodayStartTime = () => {
   const date = new Date()
   date.setHours(0)
   date.setMinutes(0)
@@ -11,4 +11,4 @@ const getTodayTimestamp = () => {
   return date.getTime()
 }
 
-export default getTodayTimestamp
+export default getTodayStartTime

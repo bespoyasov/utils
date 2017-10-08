@@ -1,9 +1,12 @@
+import isString from '../types/isString'
+
 /**
  * Returns mime type of given file extention
  * @param {String} ext
  * @returns {String} 
  */
 const pickExtention = ext => {
+  if (!ext || !isString(ext)) return ''
   switch(ext) {
     case 'png':  return 'image/png'
     case 'jpg':

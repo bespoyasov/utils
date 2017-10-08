@@ -1,4 +1,4 @@
-import isString from '../types/isString'
+import isString from '../../types/isString'
 
 /**
  * Removes characters in given string after given index
@@ -9,13 +9,12 @@ import isString from '../types/isString'
 const truncate = (str='', config={}) => {
   const {
     len=Infinity,
-    finalChar='...',
+    char='...',
   } = config
 
-  return !!str
-    && isString(str)
-    && str.length > len ? str.substr(0, len) + finalChar : str
-    || ''
+  return !!str && isString(str)
+    ? str.length > len ? str.substr(0, len) + char : str
+    : ''
 }
 
 export default truncate
