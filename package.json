@@ -4,7 +4,7 @@
   "description": "Helper functions",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha ./**/*.spec.js --require babel-register"
+    "test": "cross-env NODE_ENV=test mocha './!(node_modules)/**/*.spec.js' --require babel-register"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
     "babel-register": "^6.26.0",
     "cross-env": "^5.0.5",
     "expect": "^21.2.1",
-    "mocha": "^4.0.1"
+    "jsdom": "^3.1.2",
+    "mocha": "^4.0.1",
+    "mocha-jsdom": "^1.1.0"
   }
 }

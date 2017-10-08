@@ -4,6 +4,7 @@
  * @return {Any}
  */
 const getItem = (key='') => {
+  if ('undefined' === typeof window) return null
   const ls = window && window.localStorage
   if (!ls) return null
   

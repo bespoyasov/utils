@@ -4,6 +4,7 @@
  * @param {Any} data
  */
 const setItem = (key='', data=null) => {
+  if ('undefined' === typeof window) return null
   const ls = window && window.localStorage
   if (!ls) return null
   
