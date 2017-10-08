@@ -1,4 +1,4 @@
-import isArray from '../types/isArray'
+import isArray from '../../types/isArray'
 
 /**
  * Returns last element in given array
@@ -7,8 +7,8 @@ import isArray from '../types/isArray'
  * @return {Any}
  */
 const tail = arr =>
-  isArray(arr) 
-  && arr[arr.length - 1]
-  || null
+  isArray(arr) && !!arr.length
+    ? arr[arr.length - 1]
+    : null
 
 export default tail

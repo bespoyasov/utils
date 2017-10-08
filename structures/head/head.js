@@ -1,4 +1,4 @@
-import isArray from '../types/isArray'
+import isArray from '../../types/isArray'
 
 /**
  * Returns first element in given array
@@ -7,8 +7,8 @@ import isArray from '../types/isArray'
  * @return {Any}
  */
 const head = arr =>
-  isArray(arr)
-  && arr[0]
-  || null
+  isArray(arr) && !!arr.length
+    ? arr[0]
+    : null
 
 export default head
