@@ -1,5 +1,5 @@
 /**
- * Returns valid mongo id-string
+ * Returns valid mongo id-string 24 char long
  * @return {String} 
  */
 const createId = (m=Math, d=Date, h=16, s=s=>m.floor(s).toString(h)) =>

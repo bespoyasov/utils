@@ -1,4 +1,4 @@
-import isObject from '../types/isObject'
+import isObject from '../../types/isObject'
 
 /**
  * Returns id string from given mongoId object
