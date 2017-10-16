@@ -1,5 +1,5 @@
 /**
- * Set value for defined key in local storage
+ * Sets JSON.stringified value for defined key in local storage
  * @param {String} key
  * @param {Any} data
  */

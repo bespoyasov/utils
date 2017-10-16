@@ -1,16 +1,20 @@
+import localStorage from 'mock-local-storage'
+
 import expect from 'expect'
-import jsdom from 'mocha-jsdom'
 import setItem from './setItem'
 
-describe('setItem', () => {
 
+describe('setItem', () => {
   it('should return null', () => {
+    global.window = undefined
     expect(setItem('test', 'test')).toEqual(null)
   })
 
-  jsdom()
+  it('should save value to localStorage', () => {
+    global.window = {}
+    window.localStorage = global.localStorage
 
-  it('should return null', () => {
-    // expect(setItem('test', 'test')).toEqual(null)
+    setItem('test', 'test')
+    expect(JSON.parse(window.localStorage.getItem('test'))).toEqual('test')
   })
 })

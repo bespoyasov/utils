@@ -1,5 +1,6 @@
 /**
- * Gets value from local storage
+ * Gets value from local storage and tries to JSON.parse it
+ * In case of error returns null
  * @param {String} key
  * @return {Any}
  */
@@ -12,7 +13,7 @@ const getItem = (key='') => {
     const res = ls.getItem(key)
     return !!res ? JSON.parse(res) : null
   }
-  catch (e) { 
+  catch(e) { 
     console.error(e) 
     return null
   }
