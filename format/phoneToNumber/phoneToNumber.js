@@ -1,4 +1,4 @@
-import isNumberOrString from '../types/isNumberOrString'
+import isNumberOrString from '../../types/isNumberOrString'
 
 /**
  * Converts phone-string to phone-number

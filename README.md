@@ -2,4 +2,4 @@
 
 Helper functions
 
-Finished on `setItem`
+Updating test functions: array.forEach
