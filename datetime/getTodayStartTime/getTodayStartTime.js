@@ -1,5 +1,5 @@
 /**
- * Returns today's start timestamp
+ * Returns today's start timestamp, not UTC
  * @return {Number}
  */
 const getTodayStartTime = () => {

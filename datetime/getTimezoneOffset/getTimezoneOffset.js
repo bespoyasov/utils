@@ -1,5 +1,5 @@
 /**
- * Returns number of ms of user's local timezone from UTC
+ * Returns user's timezone shift in ms
  * @return {Number} ms
  */
 const getTimezoneOffset = () =>
