@@ -1,6 +1,6 @@
 /**
- * Выбирает коллекцию элементов по селектору
- * @param {String} slctr ЦСС-селектор
+ * Picks elements collection by given selector
+ * @param {String} slctr
  * @return {DOMCollection}
  */
 const getEls = slctr => 

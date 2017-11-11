@@ -3,7 +3,7 @@
  */
 const instantlyScrollToBottom = () => {
   if (typeof(window) === 'undefined') return null
-  window.scrollTo(0, 100000)
+  window.scrollTo(0, 1000000)
 }
 
 export default instantlyScrollToBottom

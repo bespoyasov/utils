@@ -1,6 +1,6 @@
 /**
- * Выбирает элемент по селектору
- * @param {String} slctr ЦСС-селектор
+ * Picks first element by given selector
+ * @param {String} slctr
  * @return {DOMNode}
  */
 const getEl = slctr => 

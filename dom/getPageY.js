@@ -1,9 +1,9 @@
 /**
- * Returns Y-direction length
- * @param {Event} e touhcmove event
+ * Returns Y-direction of event.page
+ * @param {Event} e touhcmove or mousemove event
  * @return {Number}
  */
-const getTouchY = e =>
+const getPageY = e =>
   e.changedTouches
     && e.changedTouches.length
     && e.changedTouches[0].pageY
@@ -13,4 +13,4 @@ const getTouchY = e =>
   || e.pageY
   || 0
 
-export default getTouchY
+export default getPageY

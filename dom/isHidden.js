@@ -1,5 +1,5 @@
 /**
- * Defines if given node is hidden or is in hidden element
+ * Determines if given node is hidden or is in hidden element
  * @param {DOMNode} node
  * @returns {Bool} 
  */
