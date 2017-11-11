@@ -1,8 +1,19 @@
-/**
- * Defines is user's OS is iOS
- * @return {Bool}
- */
-const isiOS = () =>
-  !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
+import expect from 'expect'
+import isiOS from './isiOS'
 
-export default isiOS
+describe('isiOS', () => {
+  global.navigator = {}
+
+  it('should return boolean', () => {
+    expect(typeof isiOS()).toEqual('boolean')
+  })
+
+  it('should return false', () => {
+    expect(isiOS()).toEqual(false)
+  })
+
+  it('should return true', () => {
+    global.navigator.platform = 'iPhone'
+    expect(isiOS()).toEqual(true)
+  })
+})
