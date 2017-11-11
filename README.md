@@ -15,7 +15,7 @@ Tested javascript helpers.
 
 ### Text
 - [`clearHtmlTags`](https://github.com/bespoyasov/tools/tree/master/text/clearHtmlTags)
-– [`getFirstChar`](https://github.com/bespoyasov/tools/tree/master/text/getFirstChar)
+- [`getFirstChar`](https://github.com/bespoyasov/tools/tree/master/text/getFirstChar)
 - [`getFirstNonSpaceChar`](https://github.com/bespoyasov/tools/tree/master/text/getFirstNonSpaceChar)
 - [`numericStringToNumber`](https://github.com/bespoyasov/tools/tree/master/text/numericStringToNumber)
 - [`removePunctuation`](https://github.com/bespoyasov/tools/tree/master/text/removePunctuation)
