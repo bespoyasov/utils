@@ -23,11 +23,16 @@ describe('truncate', () => {
   })
 
   it('should return empty string', () => {
-    expect(truncate(undefined)).toEqual('')
-    expect(truncate(null)).toEqual('')
-    expect(truncate({})).toEqual('')
-    expect(truncate([])).toEqual('')
-    expect(truncate(5)).toEqual('')
-    expect(truncate()).toEqual('')
+    const cases = [
+      undefined,
+      null,
+      {},
+      [],
+      5
+    ]
+
+    cases.forEach((testCase) => {
+      expect(truncate(testCase)).toEqual('')
+    })
   })
 })

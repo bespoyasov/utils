@@ -24,9 +24,15 @@ describe('stringToSearchable', () => {
   })
 
   it('should return empty string', () => {
-    expect(stringToSearchable()).toEqual('')
-    expect(stringToSearchable({})).toEqual('')
-    expect(stringToSearchable([])).toEqual('')
-    expect(stringToSearchable(null)).toEqual('')
+    const cases = [
+      undefined,
+      null,
+      {},
+      []
+    ]
+
+    cases.forEach((testCase) => {
+      expect(stringToSearchable(testCase)).toEqual('')
+    })
   })
 })

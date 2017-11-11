@@ -7,23 +7,35 @@ describe('isUrl', () => {
   })
 
   it('should return true', () => {
-    expect(isUrl('test.z')).toEqual(true)
-    expect(isUrl('test.io')).toEqual(true)
-    expect(isUrl('test.com')).toEqual(true)
-    expect(isUrl('test.test')).toEqual(true)
-    expect(isUrl('http://test.com')).toEqual(true)
-    expect(isUrl('www.test.com')).toEqual(true)
+    const cases = [
+      'test.z',
+      'test.io',
+      'test.com',
+      'test.test',
+      'http://test.com',
+      'www.test.com'
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isUrl(testCase)).toEqual(true)
+    })
   })
 
   it('should return false', () => {
-    expect(isUrl('.test')).toEqual(false)
-    expect(isUrl('test.')).toEqual(false)
-    expect(isUrl('test')).toEqual(false)
-    expect(isUrl('')).toEqual(false)
-    expect(isUrl()).toEqual(false)
-    expect(isUrl(42)).toEqual(false)
-    expect(isUrl([])).toEqual(false)
-    expect(isUrl({})).toEqual(false)
-    expect(isUrl(() => {})).toEqual(false)
+    const cases = [
+      '.test',
+      'test.',
+      'test',
+      '',
+      42,
+      [],
+      {},
+      () => {},
+      undefined
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isUrl(testCase)).toEqual(false)
+    })
   })
 })

@@ -15,11 +15,16 @@ describe('clearHtmlTags', () => {
   })
 
   it('should return empty string', () => {
-    expect(clearHtmlTags(undefined)).toEqual('')
-    expect(clearHtmlTags(null)).toEqual('')
-    expect(clearHtmlTags({})).toEqual('')
-    expect(clearHtmlTags([])).toEqual('')
-    expect(clearHtmlTags(5)).toEqual('')
-    expect(clearHtmlTags()).toEqual('')
+    const cases = [
+      undefined,
+      null,
+      {},
+      [],
+      5
+    ]
+
+    cases.forEach((testCase) => {
+      expect(clearHtmlTags(testCase)).toEqual('')
+    })
   })
 })

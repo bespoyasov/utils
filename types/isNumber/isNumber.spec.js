@@ -7,23 +7,35 @@ describe('isNumber', () => {
   })
 
   it('should return true', () => {
-    expect(isNumber(42)).toEqual(true)
-    expect(isNumber(.42)).toEqual(true)
-    expect(isNumber(-42)).toEqual(true)
-    expect(isNumber(new Number())).toEqual(true)
-    expect(isNumber(Math.PI)).toEqual(true)
+    const cases = [
+      42,
+      .42,
+      -42,
+      new Number(),
+      Math.PI
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isNumber(testCase)).toEqual(true)
+    })
   })
 
   it('should return false', () => {
-    expect(isNumber('string')).toEqual(false)
-    expect(isNumber(null)).toEqual(false)
-    expect(isNumber([])).toEqual(false)
-    expect(isNumber(undefined)).toEqual(false)
-    expect(isNumber(true)).toEqual(false)
-    expect(isNumber(() => {})).toEqual(false)
-    expect(isNumber(new Function())).toEqual(false)
-    expect(isNumber(NaN)).toEqual(false)
-    expect(isNumber(Infinity)).toEqual(false)
-    expect(isNumber(-Infinity)).toEqual(false)
+    const cases = [
+      'string',
+      null,
+      [],
+      undefined,
+      true,
+      () => {},
+      new Function(),
+      NaN,
+      Infinity,
+      -Infinity
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isNumber(testCase)).toEqual(false)
+    })
   })
 })

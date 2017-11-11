@@ -7,30 +7,54 @@ describe('toClassProp', () => {
   })
 
   it('should return "string"', () => {
-    expect(toClassProp('')).toEqual('string')
-    expect(toClassProp('string')).toEqual('string')
-    expect(toClassProp(new String())).toEqual('string')
+    const cases = [
+      '',
+      'string',
+      new String()
+    ]
+
+    cases.forEach((testCase) => {
+      expect(toClassProp(testCase)).toEqual('string')
+    })
   })
 
   it('should return "number"', () => {
-    expect(toClassProp(42)).toEqual('number')
-    expect(toClassProp(.42)).toEqual('number')
-    expect(toClassProp(-42)).toEqual('number')
-    expect(toClassProp(new Number())).toEqual('number')
-    expect(toClassProp(Infinity)).toEqual('number')
-    expect(toClassProp(NaN)).toEqual('number')
+    const cases = [
+      42,
+      .42,
+      -42,
+      new Number(),
+      Infinity,
+      NaN
+    ]
+
+    cases.forEach((testCase) => {
+      expect(toClassProp(testCase)).toEqual('number')
+    })
   })
 
   it('should return "object"', () => {
-    expect(toClassProp({})).toEqual('object')
-    expect(toClassProp({a: 42})).toEqual('object')
-    expect(toClassProp(new Object())).toEqual('object')
+    const cases = [
+      {},
+      {a: 42},
+      new Object()
+    ]
+
+    cases.forEach((testCase) => {
+      expect(toClassProp(testCase)).toEqual('object')
+    })
   })
 
   it('should return "array"', () => {
-    expect(toClassProp([])).toEqual('array')
-    expect(toClassProp([42])).toEqual('array')
-    expect(toClassProp(new Array())).toEqual('array')
+    const cases = [
+      [],
+      [42],
+      new Array()
+    ]
+
+    cases.forEach((testCase) => {
+      expect(toClassProp(testCase)).toEqual('array')
+    })
   })
 
   it('should return "error"', () => {

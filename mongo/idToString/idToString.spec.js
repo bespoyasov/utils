@@ -25,11 +25,17 @@ describe('idToString', () => {
   })
 
   it('should return empty string', () => {
-    expect(idToString(undefined)).toEqual('')
-    expect(idToString(null)).toEqual('')
-    expect(idToString(Math)).toEqual('')
-    expect(idToString({})).toEqual('')
-    expect(idToString('')).toEqual('')
-    expect(idToString(5)).toEqual('')
+    const cases = [
+      undefined,
+      null,
+      Math,
+      {},
+      '',
+      5
+    ]
+
+    cases.forEach((testCase) => {
+      expect(idToString(testCase)).toEqual('')
+    })
   })
 })

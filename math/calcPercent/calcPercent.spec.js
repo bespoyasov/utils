@@ -31,15 +31,19 @@ describe('calcPercent', () => {
   })
 
   it('should return 0', () => {
-    expect(calcPercent(5, 'test')).toEqual(0)
-    expect(calcPercent(5, null)).toEqual(0)
-    expect(calcPercent(5, {})).toEqual(0)
+    const cases = [
+      [5, 'test'],
+      [5, null],
+      [5, {}],
+      [undefined],
+      [null],
+      [{}],
+      [[]],
+      [5],
+    ]
 
-    expect(calcPercent(undefined)).toEqual(0)
-    expect(calcPercent(null)).toEqual(0)
-    expect(calcPercent({})).toEqual(0)
-    expect(calcPercent([])).toEqual(0)
-    expect(calcPercent(5)).toEqual(0)
-    expect(calcPercent()).toEqual(0)
+    cases.forEach((testCase) => {
+      expect(calcPercent(...testCase)).toEqual(0)
+    })
   })
 })

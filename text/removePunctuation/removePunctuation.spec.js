@@ -15,11 +15,16 @@ describe('removePunctuation', () => {
   })
 
   it('should return empty string', () => {
-    expect(removePunctuation(undefined)).toEqual('')
-    expect(removePunctuation(null)).toEqual('')
-    expect(removePunctuation({})).toEqual('')
-    expect(removePunctuation([])).toEqual('')
-    expect(removePunctuation(5)).toEqual('')
-    expect(removePunctuation()).toEqual('')
+    const cases = [
+      undefined,
+      null,
+      {},
+      [],
+      5
+    ]
+
+    cases.forEach((testCase) => {
+      expect(removePunctuation(testCase)).toEqual('')
+    })
   })
 })

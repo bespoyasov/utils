@@ -24,8 +24,8 @@ describe('toReadableNumber', () => {
     })
   })
 
-  it('should return empty string', () => {
-    const result = 0
+  it('should return string "0"', () => {
+    const result = '0'
     const cases = [0, undefined, null, [], {}, 'test']
     
     cases.forEach((testCase, i) => {

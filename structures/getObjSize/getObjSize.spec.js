@@ -15,11 +15,16 @@ describe('getObjSize', () => {
   })
 
   it('should return 0', () => {
-    expect(getObjSize(undefined)).toEqual(0)
-    expect(getObjSize(null)).toEqual(0)
-    expect(getObjSize({})).toEqual(0)
-    expect(getObjSize([])).toEqual(0)
-    expect(getObjSize(5)).toEqual(0)
-    expect(getObjSize()).toEqual(0)
+    const cases = [
+      undefined,
+      null,
+      {},
+      [],
+      5
+    ]
+
+    cases.forEach((testCase) => {
+      expect(getObjSize(testCase)).toEqual(0)
+    })
   })
 })

@@ -7,24 +7,35 @@ describe('isString', () => {
   })
 
   it('should return true', () => {
-    expect(isString('string')).toEqual(true)
-    expect(isString('45')).toEqual(true)
-    expect(isString('')).toEqual(true)
-    expect(isString(new String())).toEqual(true)
+    const cases = [
+      'string',
+      '45',
+      '',
+      new String()
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isString(testCase)).toEqual(true)
+    })
   })
 
   it('should return false', () => {
-    expect(isString(45)).toEqual(false)
-    expect(isString(null)).toEqual(false)
-    expect(isString([])).toEqual(false)
-    expect(isString({name: 'string'})).toEqual(false)
-    expect(isString(undefined)).toEqual(false)
-    expect(isString()).toEqual(false)
-    expect(isString(true)).toEqual(false)
-    expect(isString(() => {})).toEqual(false)
-    expect(isString(new Function())).toEqual(false)
-    expect(isString(NaN)).toEqual(false)
-    expect(isString(Infinity)).toEqual(false)
-    expect(isString(-Infinity)).toEqual(false)
+    const cases = [
+      45,
+      null,
+      [],
+      {name: 'string'},
+      undefined,
+      true,
+      () => {},
+      new Function(),
+      NaN,
+      Infinity,
+      -Infinity
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isString(testCase)).toEqual(false)
+    })
   })
 })

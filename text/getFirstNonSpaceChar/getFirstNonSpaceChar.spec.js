@@ -27,11 +27,16 @@ describe('getFirstNonSpaceChar', () => {
   })
 
   it('should return empty string', () => {
-    expect(getFirstNonSpaceChar(undefined)).toEqual('')
-    expect(getFirstNonSpaceChar(null)).toEqual('')
-    expect(getFirstNonSpaceChar({})).toEqual('')
-    expect(getFirstNonSpaceChar([])).toEqual('')
-    expect(getFirstNonSpaceChar(5)).toEqual('')
-    expect(getFirstNonSpaceChar()).toEqual('')
+    const cases = [
+      undefined,
+      null,
+      {},
+      [],
+      5
+    ]
+
+    cases.forEach((testCase) => {
+      expect(getFirstNonSpaceChar(testCase)).toEqual('')
+    })
   })
 })

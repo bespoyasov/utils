@@ -1,5 +1,5 @@
-import isNumber from '../types/isNumber'
-import isObject from '../types/isObject'
+import isNumber from '../../types/isNumber'
+import isObject from '../../types/isObject'
 
 const THINSP = ' '
 
@@ -17,7 +17,9 @@ const formatSum = (sum, config={}) => {
     pointChar=',',
   } = config
 
-  if (sum < biggerThan) return sum.toString()
+  if (sum < biggerThan) {
+    return sum.toString().replace('.', pointChar)
+  }
 
   const _replace = str =>
     str.replace(/(\d)(?=(\d{3})+$)/g, '$1' + THINSP)
@@ -28,7 +30,7 @@ const formatSum = (sum, config={}) => {
 
   const integer = str.substr(0, pointIndex) || ''
   const fraction = str.substr(pointIndex + 1) || ''
-  return `${_replace(integer)}${pointChar}${afterDot}`
+  return `${_replace(integer)}${pointChar}${fraction}`
 }
 
 export default formatSum

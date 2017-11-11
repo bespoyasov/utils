@@ -7,23 +7,35 @@ describe('isNumericString', () => {
   })
 
   it('should return true', () => {
-    expect(isNumericString('42')).toEqual(true)
-    expect(isNumericString('-42')).toEqual(true)
-    expect(isNumericString('4.2')).toEqual(true)
-    expect(isNumericString('4,2')).toEqual(true)
+    const cases = [
+      '42',
+      '-42',
+      '4.2',
+      '4,2'
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isNumericString(testCase)).toEqual(true)
+    })
   })
 
   it('should return false', () => {
-    expect(isNumericString(42)).toEqual(false)
-    expect(isNumericString(-42)).toEqual(false)
-    expect(isNumericString('4.2.')).toEqual(false)
-    expect(isNumericString('4,2,')).toEqual(false)
-    expect(isNumericString('4,2.3')).toEqual(false)
-    expect(isNumericString('4,2,3')).toEqual(false)
-    expect(isNumericString('test')).toEqual(false)
-    expect(isNumericString('.42.')).toEqual(false)
-    expect(isNumericString()).toEqual(false)
-    expect(isNumericString([])).toEqual(false)
-    expect(isNumericString({})).toEqual(false)
+    const cases = [
+      42,
+      -42,
+      '4.2.',
+      '4,2,',
+      '4,2.3',
+      '4,2,3',
+      'test',
+      '.42.',
+      undefined,
+      [],
+      {}
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isNumericString(testCase)).toEqual(false)
+    })
   })
 })

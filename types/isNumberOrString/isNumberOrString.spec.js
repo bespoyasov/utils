@@ -7,25 +7,37 @@ describe('isNumberOrString', () => {
   })
 
   it('should return true', () => {
-    expect(isNumberOrString(42)).toEqual(true)
-    expect(isNumberOrString(.42)).toEqual(true)
-    expect(isNumberOrString(-42)).toEqual(true)
-    expect(isNumberOrString(new Number())).toEqual(true)
-    expect(isNumberOrString('string')).toEqual(true)
-    expect(isNumberOrString('45')).toEqual(true)
-    expect(isNumberOrString('')).toEqual(true)
-    expect(isNumberOrString(new String())).toEqual(true)
+    const cases = [
+      42,
+      .42,
+      -42,
+      new Number(),
+      'string',
+      '45',
+      '',
+      new String()
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isNumberOrString(testCase)).toEqual(true)
+    })
   })
 
   it('should return false', () => {
-    expect(isNumberOrString(null)).toEqual(false)
-    expect(isNumberOrString([])).toEqual(false)
-    expect(isNumberOrString(undefined)).toEqual(false)
-    expect(isNumberOrString(true)).toEqual(false)
-    expect(isNumberOrString(() => {})).toEqual(false)
-    expect(isNumberOrString(new Function())).toEqual(false)
-    expect(isNumberOrString(NaN)).toEqual(false)
-    expect(isNumberOrString(Infinity)).toEqual(false)
-    expect(isNumberOrString(-Infinity)).toEqual(false)
+    const cases = [
+      null,
+      [],
+      undefined,
+      true,
+      () => {},
+      new Function(),
+      NaN,
+      Infinity,
+      -Infinity
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isNumberOrString(testCase)).toEqual(false)
+    })
   })
 })

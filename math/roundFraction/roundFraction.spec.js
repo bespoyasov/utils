@@ -7,15 +7,27 @@ describe('roundFraction', () => {
   })
 
   it('should return 5.55', () => {
-    expect(roundFraction(5.5478)).toEqual(5.55)
-    expect(roundFraction(5.547)).toEqual(5.55)
-    expect(roundFraction(5.552)).toEqual(5.55)
+    const cases = [
+      5.5478,
+      5.547,
+      5.552
+    ]
+
+    cases.forEach((testCase) => {
+      expect(roundFraction(testCase)).toEqual(5.55)
+    })
   })
 
   it('should return 5.5', () => {
-    expect(roundFraction(5.5478, {precision: 1})).toEqual(5.5)
-    expect(roundFraction(5.547, {precision: 1})).toEqual(5.5)
-    expect(roundFraction(5.502, {precision: 1})).toEqual(5.5)
+    const cases = [
+      5.5478,
+      5.547,
+      5.502
+    ]
+
+    cases.forEach((testCase) => {
+      expect(roundFraction(testCase, {precision: 1})).toEqual(5.5)
+    })
   })
 
   it('should return 5.50', () => {
@@ -30,12 +42,17 @@ describe('roundFraction', () => {
   })
 
   it('should return 0', () => {
-    expect(roundFraction(5, 'test')).toEqual(0)
-    expect(roundFraction(5, null)).toEqual(0)
-    expect(roundFraction(undefined)).toEqual(0)
-    expect(roundFraction(null)).toEqual(0)
-    expect(roundFraction({})).toEqual(0)
-    expect(roundFraction([])).toEqual(0)
-    expect(roundFraction()).toEqual(0)
+    const cases = [
+      [5, 'test'],
+      [5, null],
+      [undefined],
+      [null],
+      [{}],
+      [[]]
+    ]
+
+    cases.forEach((testCase) => {
+      expect(roundFraction(...testCase)).toEqual(0)
+    })
   })
 })

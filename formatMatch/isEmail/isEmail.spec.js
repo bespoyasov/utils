@@ -7,24 +7,37 @@ describe('isEmail', () => {
   })
 
   it('should return true', () => {
-    expect(isEmail('test@gmail.com')).toEqual(true)
-    expect(isEmail('test@me.com')).toEqual(true)
-    expect(isEmail('t@gmail.com')).toEqual(true)
-    expect(isEmail('test@g.io')).toEqual(true)
-    expect(isEmail('t@g.z')).toEqual(true)
+    const cases = [
+      'test@gmail.com',
+      'test@me.com',
+      't@gmail.com',
+      'test@g.io',
+      't@g.z',
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isEmail(testCase)).toEqual(true)
+    })
   })
 
   it('should return false', () => {
-    expect(isEmail('@gmail.com')).toEqual(false)
-    expect(isEmail('test@gmail.')).toEqual(false)
-    expect(isEmail('test@gmailcom')).toEqual(false)
-    expect(isEmail('testgmail.com')).toEqual(false)
-    expect(isEmail('test.gmail@com')).toEqual(false)
-    expect(isEmail('')).toEqual(false)
-    expect(isEmail(42)).toEqual(false)
-    expect(isEmail()).toEqual(false)
-    expect(isEmail([])).toEqual(false)
-    expect(isEmail({})).toEqual(false)
-    expect(isEmail(() => {})).toEqual(false)
+    const cases = [
+      '@gmail.com',
+      'test@gmail.',
+      'test@gmailcom',
+      'test.gmail@com',
+      '',
+      42,
+      [],
+      {},
+      () => {},
+      undefined,
+      null,
+      Math
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isEmail(testCase)).toEqual(false)
+    })
   })
 })

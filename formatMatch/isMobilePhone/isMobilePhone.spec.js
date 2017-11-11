@@ -7,32 +7,44 @@ describe('isMobilePhone', () => {
   })
 
   it('should return true', () => {
-    expect(isMobilePhone('89991112233')).toEqual(true)
-    expect(isMobilePhone('+79991112233')).toEqual(true)
-    expect(isMobilePhone('+7 999 1112233')).toEqual(true)
-    expect(isMobilePhone('+7 999 111 22 33')).toEqual(true)
-    expect(isMobilePhone('+7 (999) 1112233')).toEqual(true)
-    expect(isMobilePhone('+7 (999) 111-22-33')).toEqual(true)
-    expect(isMobilePhone('+7 (999) 111 22 33')).toEqual(true)
-    expect(isMobilePhone(89991112233)).toEqual(true)
-    expect(isMobilePhone(79991112233)).toEqual(true)
+    const cases = [
+      '89991112233',
+      '+79991112233',
+      '+7 999 1112233',
+      '+7 999 111 22 33',
+      '+7 (999) 1112233',
+      '+7 (999) 111-22-33',
+      '+7 (999) 111 22 33',
+      89991112233,
+      79991112233
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isMobilePhone(testCase)).toEqual(true)
+    })
   })
 
   it('should return false', () => {
-    expect(isMobilePhone('89991112233z')).toEqual(false)
-    expect(isMobilePhone('8999111223Z3')).toEqual(false)
-    expect(isMobilePhone('899911122б33')).toEqual(false)
-    expect(isMobilePhone('89991112Б233')).toEqual(false)
-    expect(isMobilePhone('8.9991112233')).toEqual(false)
-    expect(isMobilePhone('8,9991112233')).toEqual(false)
-    expect(isMobilePhone(8.9991112233)).toEqual(false)
-    expect(isMobilePhone('')).toEqual(false)
-    expect(isMobilePhone('9991112233')).toEqual(false)
-    expect(isMobilePhone(9991112233)).toEqual(false)
-    expect(isMobilePhone()).toEqual(false)
-    expect(isMobilePhone([])).toEqual(false)
-    expect(isMobilePhone('test')).toEqual(false)
-    expect(isMobilePhone({})).toEqual(false)
-    expect(isMobilePhone(() => {})).toEqual(false)
+    const cases = [
+      '89991112233z',
+      '8999111223Z3',
+      '899911122б33',
+      '89991112Б233',
+      '8.9991112233',
+      '8,9991112233',
+      8.9991112233,
+      '9991112233',
+      9991112233,
+      undefined,
+      'test',
+      '',
+      [],
+      {},
+      () => {}
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isMobilePhone(testCase)).toEqual(false)
+    })
   })
 })

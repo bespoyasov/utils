@@ -18,12 +18,18 @@ describe('composeId', () => {
   })
 
   it('should return null', () => {
-    expect(composeId(undefined)).toEqual(null)
-    expect(composeId('test')).toEqual(null)
-    expect(composeId(null)).toEqual(null)
-    expect(composeId(Math)).toEqual(null)
-    expect(composeId({})).toEqual(null)
-    expect(composeId('')).toEqual(null)
-    expect(composeId(5)).toEqual(null)
+    const cases = [
+      undefined,
+      'test',
+      null,
+      Math,
+      {},
+      '',
+      5
+    ]
+
+    cases.forEach((testCase) => {
+      expect(composeId(testCase)).toEqual(null)
+    })
   })
 })

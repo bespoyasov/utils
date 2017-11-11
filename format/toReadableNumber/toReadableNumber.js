@@ -6,7 +6,7 @@ import isNumber from '../../types/isNumber'
  * @return {String}
  */
 const toReadableNumber = (num) => {
-  if (!isNumber(num) || (!num && num !== 0)) return '' 
+  if (!isNumber(num) || (!num && num !== 0)) return '0' 
   
   const str = num.toString()
   return str.lastIndexOf('.') < str.length - 1 

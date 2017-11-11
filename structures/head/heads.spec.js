@@ -8,11 +8,16 @@ describe('head', () => {
   })
 
   it('should return null', () => {
-    expect(head(undefined)).toEqual(null)
-    expect(head(null)).toEqual(null)
-    expect(head({})).toEqual(null)
-    expect(head([])).toEqual(null)
-    expect(head(5)).toEqual(null)
-    expect(head()).toEqual(null)
+    const cases = [
+      undefined,
+      null,
+      {},
+      [],
+      5
+    ]
+
+    cases.forEach((testCase) => {
+      expect(head(testCase)).toEqual(null)
+    })
   })
 })

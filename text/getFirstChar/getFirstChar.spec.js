@@ -19,11 +19,16 @@ describe('getFirstChar', () => {
   })
 
   it('should return empty string', () => {
-    expect(getFirstChar(undefined)).toEqual('')
-    expect(getFirstChar(null)).toEqual('')
-    expect(getFirstChar({})).toEqual('')
-    expect(getFirstChar([])).toEqual('')
-    expect(getFirstChar(5)).toEqual('')
-    expect(getFirstChar()).toEqual('')
+    const cases = [
+      undefined,
+      null,
+      {},
+      [],
+      5
+    ]
+
+    cases.forEach((testCase) => {
+      expect(getFirstChar(testCase)).toEqual('')
+    })
   })
 })

@@ -20,11 +20,16 @@ describe('numericStringToNumber', () => {
   })
 
   it('should return zero', () => {
-    expect(numericStringToNumber(undefined)).toEqual(0)
-    expect(numericStringToNumber('test')).toEqual(0)
-    expect(numericStringToNumber(null)).toEqual(0)
-    expect(numericStringToNumber({})).toEqual(0)
-    expect(numericStringToNumber([])).toEqual(0)
-    expect(numericStringToNumber()).toEqual(0)
+    const cases = [
+      undefined,
+      'test',
+      null,
+      {},
+      [],
+    ]
+
+    cases.forEach((testCase) => {
+      expect(numericStringToNumber(testCase)).toEqual(0)
+    })
   })
 })

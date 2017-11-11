@@ -8,24 +8,45 @@ describe('dropRight', () => {
   })
 
   it('should return empty array', () => {
-    expect(dropRight()().length).toEqual(0)
-    expect(dropRight([])().length).toEqual(0)
-    expect(dropRight()(1).length).toEqual(0)
-    expect(dropRight([])(1).length).toEqual(0)
-    expect(dropRight([1])(1).length).toEqual(0)
+    const cases = [
+      [undefined, undefined],
+      [[], undefined],
+      [undefined, 1],
+      [[], 1],
+      [[1], 1]
+    ]
+
+    cases.forEach((testCase) => {
+      const [a, b] = testCase
+      expect(dropRight(a)(b).length).toEqual(0)
+    })
   })
 
   it('should return array of 1 element', () => {
-    expect(dropRight([1])(0).length).toEqual(1)
-    expect(dropRight([1,2])(1).length).toEqual(1)
-    expect(dropRight([1,2,3])(2).length).toEqual(1)
+    const cases = [
+      [[1], 0],
+      [[1,2], 1],
+      [[1,2,3], 2]
+    ]
+
+    cases.forEach((testCase) => {
+      const [a, b] = testCase
+      expect(dropRight(a)(b).length).toEqual(1)
+    })
   })
 
   it('should return empty array', () => {
-    expect(dropRight(undefined)().length).toEqual(0)
-    expect(dropRight('test')().length).toEqual(0)
-    expect(dropRight(null)().length).toEqual(0)
-    expect(dropRight(42)().length).toEqual(0)
-    expect(dropRight({})().length).toEqual(0)
+    const cases = [
+      [undefined, undefined],
+      ['test', undefined],
+      [null, undefined],
+      [42, undefined],
+      [{}, undefined]
+    ]
+
+    cases.forEach((testCase) => {
+      const [a, b] = testCase
+      expect(dropRight(a)(b).length).toEqual(0)
+    })
   })
 })

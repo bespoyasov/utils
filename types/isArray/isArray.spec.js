@@ -7,22 +7,34 @@ describe('isArray', () => {
   })
 
   it('should return true', () => {
-    expect(isArray([])).toEqual(true)
-    expect(isArray([1,2,3])).toEqual(true)
-    expect(isArray(new Array())).toEqual(true)
+    const cases = [
+      [],
+      [1,2,3],
+      new Array()
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isArray(testCase)).toEqual(true)
+    })
   })
 
   it('should return false', () => {
-    expect(isArray(null)).toEqual(false)
-    expect(isArray({})).toEqual(false)
-    expect(isArray({'a':42})).toEqual(false)
-    expect(isArray(new Object())).toEqual(false)
-    expect(isArray(undefined)).toEqual(false)
-    expect(isArray(true)).toEqual(false)
-    expect(isArray(() => {})).toEqual(false)
-    expect(isArray(new Function())).toEqual(false)
-    expect(isArray(NaN)).toEqual(false)
-    expect(isArray(Infinity)).toEqual(false)
-    expect(isArray(-Infinity)).toEqual(false)
+    const cases = [
+      null,
+      {},
+      {'a':42},
+      new Object(),
+      undefined,
+      true,
+      () => {},
+      new Function(),
+      NaN,
+      Infinity,
+      -Infinity,
+    ]
+
+    cases.forEach((testCase) => {
+      expect(isArray(testCase)).toEqual(false)
+    })
   })
 })
