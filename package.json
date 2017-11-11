@@ -26,6 +26,7 @@
     "jsdom": "^3.1.2",
     "mocha": "^4.0.1",
     "mocha-jsdom": "^1.1.0",
-    "mock-local-storage": "^1.0.5"
+    "mock-local-storage": "^1.0.5",
+    "sinon": "^4.1.2"
   }
 }
