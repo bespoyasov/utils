@@ -1,7 +1,7 @@
 import isNumber from '../../types/isNumber'
 
 /**
- * Replaces dot in number with coma
+ * Replaces dot in number with comma
  * @param {Number} num 
  * @return {String}
  */

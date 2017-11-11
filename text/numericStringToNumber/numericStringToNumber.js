@@ -1,7 +1,7 @@
 import isString from '../../types/isString'
 
 /**
- * Removes every character from giver string except numbers, comas and points
+ * Removes every character from giver string except numbers, commas and points
  * returned value is a number with or without point
  * if given argument is not a string returns 0
  * @param {String} str 

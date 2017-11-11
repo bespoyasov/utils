@@ -1,7 +1,7 @@
 import isString from '../../types/isString'
 
 /**
- * Returns mime type of given file extention
+ * Returns mime type of given file extention or unknown extention with dot before
  * @param {String} ext
  * @returns {String} 
  */

@@ -1,5 +1,5 @@
 /**
- * Determines is user's OS is iOS
+ * Determines if user's OS is iOS
  * @return {Bool}
  */
 const isiOS = () =>

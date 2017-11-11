@@ -1,7 +1,7 @@
 import isNumericString from '../../types/isNumericString'
 
 /**
- * Replaces coma in string with dot
+ * Replaces comma in string with dot
  * @param {String} num 
  * @return {Number}
  */

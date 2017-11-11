@@ -1,7 +1,7 @@
 import isString from '../../types/isString'
 
 /**
- * Returns first character of tgiven string
+ * Returns first character of given string
  * @param {String} str
  * @return {String}
  */

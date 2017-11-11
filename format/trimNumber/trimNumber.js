@@ -1,7 +1,7 @@
 import isNumber from '../../types/isNumber'
 
 /**
- * RRemoves all the characters after 2nd char after point
+ * Removes all the characters after 2nd char after point
  * doens't round fracion, just removes
  * if arg is not a string returns 0
  * if arg has no point returns arg
