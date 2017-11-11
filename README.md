@@ -1,5 +1,6 @@
 # Tools
 
-Helper functions
+Tested javascript helpers.
 
-Updating test functions: array.forEach
+## Table of contents
+
