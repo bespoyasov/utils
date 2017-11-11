@@ -72,6 +72,6 @@ Tested javascript helpers.
 - [`createId`](https://github.com/bespoyasov/tools/tree/master/mongo/createId)
 - [`idToString`](https://github.com/bespoyasov/tools/tree/master/mongo/idToString)
 
-## TODO:
+## Todo
 - [ ] DOM helpers tests;
 - [ ] Date time format helpers.
