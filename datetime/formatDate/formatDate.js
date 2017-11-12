@@ -10,6 +10,8 @@ import isNumber from '../../types/isNumber'
 const formatDate = (timestamp, config={}) => {
   if (!timestamp || !isNumber(timestamp)) return ''
 
+  const padLeft = (n) => n < 10 ? `0${n}` : n
+
   const {
     months='jan feb mar apr may jun jul aug sept oct nov dec'.split(' '),
     padStart=false,
@@ -20,12 +22,12 @@ const formatDate = (timestamp, config={}) => {
   const date = dateObj.getDate()
   const month = months[dateObj.getMonth()]
 
-  const dateStr = padStart && date < 10 
-    ? '0' + date 
+  const dateStr = padStart 
+    ? padLeft(date) 
     : date
 
-  const monthStr = typeof month === 'number' && padStart && month < 10
-    ? '0' + month
+  const monthStr = typeof month === 'number' && padStart 
+    ? padLeft(month) 
     : month
 
   return `${dateStr} ${monthStr} ${year}`
