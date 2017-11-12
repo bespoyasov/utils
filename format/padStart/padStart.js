@@ -1,5 +1,6 @@
 import isString from '../../types/isString'
 import isNumber from '../../types/isNumber'
+import repeat from '../repeat'
 
 /**
  * Returns padded left string with given char
@@ -14,7 +15,8 @@ const padStart = (str, length=0, char='') => {
   const delta = length - str.length
   if (delta <= 0) return str
   
-  const pad = Array(delta).fill(char).join('') || ''
+  // const pad = Array(delta).fill(char).join('') || ''
+  const pad = repeat(char, delta)
   return `${pad}${str}`
 }
 
