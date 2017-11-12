@@ -34,8 +34,10 @@ Tested javascript helpers.
 
 ### Text and numbers format
 - [`formatSum`](https://github.com/bespoyasov/tools/tree/master/format/formatSum)
+- [`padStart`](https://github.com/bespoyasov/tools/tree/master/format/padStart)
 - [`phoneToNumber`](https://github.com/bespoyasov/tools/tree/master/format/phoneToNumber)
 - [`pluralize`](https://github.com/bespoyasov/tools/tree/master/format/pluralize)
+- [`repeat`](https://github.com/bespoyasov/tools/tree/master/format/repeat)
 - [`roundDecimal`](https://github.com/bespoyasov/tools/tree/master/format/roundDecimal)
 - [`toComputableNumber`](https://github.com/bespoyasov/tools/tree/master/format/toComputableNumber)
 - [`toReadableNumber`](https://github.com/bespoyasov/tools/tree/master/format/toReadableNumber)
@@ -66,6 +68,9 @@ Tested javascript helpers.
 - [`getTodayStartTime`](https://github.com/bespoyasov/tools/tree/master/datetime/getTodayStartTime)
 - [`getUTCTime`](https://github.com/bespoyasov/tools/tree/master/datetime/getUTCTime)
 - [`getUTCTodayStartTime`](https://github.com/bespoyasov/tools/tree/master/datetime/getUTCTodayStartTime)
+- [`formatDate`](https://github.com/bespoyasov/tools/tree/master/datetime/formatDate)
+- [`formatTime`](https://github.com/bespoyasov/tools/tree/master/datetime/formatTime)
+- [`isEqual`](https://github.com/bespoyasov/tools/tree/master/datetime/isEqual)
 
 ### Mongo
 - [`composeId`](https://github.com/bespoyasov/tools/tree/master/mongo/composeId)
@@ -73,5 +78,4 @@ Tested javascript helpers.
 - [`idToString`](https://github.com/bespoyasov/tools/tree/master/mongo/idToString)
 
 ## Todo
-- [ ] DOM helpers tests;
-- [ ] Date time format helpers.
+- [ ] DOM helpers tests.
