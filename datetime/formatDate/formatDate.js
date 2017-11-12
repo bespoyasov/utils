@@ -13,7 +13,7 @@ const formatDate = (timestamp, config={}) => {
   const padLeft = (n) => n < 10 ? `0${n}` : n
 
   const {
-    months='jan feb mar apr may jun jul aug sept oct nov dec'.split(' '),
+    months='jan feb mar apr may jun jul aug sep oct nov dec'.split(' '),
     padStart=false,
   } = config
 
