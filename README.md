@@ -21,6 +21,7 @@ Tested javascript helpers.
 - [`removePunctuation`](https://github.com/bespoyasov/tools/tree/master/text/removePunctuation)
 - [`stringToSearchable`](https://github.com/bespoyasov/tools/tree/master/text/stringToSearchable)
 - [`truncate`](https://github.com/bespoyasov/tools/tree/master/text/truncate)
+- [`repeat`](https://github.com/bespoyasov/tools/tree/master/format/repeat)
 
 ### Math
 - [`calcPercent`](https://github.com/bespoyasov/tools/tree/master/math/calcPercent)
@@ -37,7 +38,6 @@ Tested javascript helpers.
 - [`padStart`](https://github.com/bespoyasov/tools/tree/master/format/padStart)
 - [`phoneToNumber`](https://github.com/bespoyasov/tools/tree/master/format/phoneToNumber)
 - [`pluralize`](https://github.com/bespoyasov/tools/tree/master/format/pluralize)
-- [`repeat`](https://github.com/bespoyasov/tools/tree/master/format/repeat)
 - [`roundDecimal`](https://github.com/bespoyasov/tools/tree/master/format/roundDecimal)
 - [`toComputableNumber`](https://github.com/bespoyasov/tools/tree/master/format/toComputableNumber)
 - [`toReadableNumber`](https://github.com/bespoyasov/tools/tree/master/format/toReadableNumber)
