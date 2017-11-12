@@ -14,7 +14,7 @@ const padStart = (str, length=0, char='') => {
   const delta = length - str.length
   if (delta <= 0) return str
   
-  const pad = Array(delta).join(char) || ''
+  const pad = Array(delta).fill(char).join('') || ''
   return `${pad}${str}`
 }
 
