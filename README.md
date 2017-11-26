@@ -28,6 +28,7 @@ Tested javascript helpers.
 - [`roundFraction`](https://github.com/bespoyasov/tools/tree/master/math/roundFraction)
 
 ### Data structures
+- [`xor`](https://github.com/bespoyasov/tools/tree/master/structures/xor)
 - [`head`](https://github.com/bespoyasov/tools/tree/master/structures/head)
 - [`tail`](https://github.com/bespoyasov/tools/tree/master/structures/tail)
 - [`dropRight`](https://github.com/bespoyasov/tools/tree/master/structures/dropRight)
@@ -56,6 +57,7 @@ Tested javascript helpers.
 - [`getCookie`](https://github.com/bespoyasov/tools/tree/master/storage/getCookie)
 - [`getItem`](https://github.com/bespoyasov/tools/tree/master/storage/getItem)
 - [`setItem`](https://github.com/bespoyasov/tools/tree/master/storage/setItem)
+- [`clear`](https://github.com/bespoyasov/tools/tree/master/storage/clear)
 
 ### Environment
 - [`determineOS`](https://github.com/bespoyasov/tools/tree/master/environment/determineOS)
