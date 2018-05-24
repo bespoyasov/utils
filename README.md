@@ -33,6 +33,7 @@ Tested javascript helpers.
 - [`tail`](https://github.com/bespoyasov/tools/tree/master/structures/tail)
 - [`dropRight`](https://github.com/bespoyasov/tools/tree/master/structures/dropRight)
 - [`getObjSize`](https://github.com/bespoyasov/tools/tree/master/structures/getObjSize)
+- [`omitKeys`](https://github.com/bespoyasov/tools/tree/master/structures/omitKeys)
 
 ### Text and numbers format
 - [`formatSum`](https://github.com/bespoyasov/tools/tree/master/format/formatSum)
