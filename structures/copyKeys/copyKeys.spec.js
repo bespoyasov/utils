@@ -1,17 +1,20 @@
 import expect from 'expect'
-import omitKeys from './omitKeys'
+import copyKeys from './copyKeys'
 
 const testObject = { 
   id: 42, 
   userName: 'VasyaSuperStar42',
-  fullName: 'Vasiliy Pupkin'
+  fullName: { 
+    firstName: 'Vasiliy',
+    lastName: 'Pupkin'
+  }
 }
 
 const keys = ['id', 'fullName']
-const result = { userName: 'VasyaSuperStar42' }
+const {userName, ...result} = testObject
 
 
-describe('omitKeys', () => {
+describe('copyKeys', () => {
   it('should return empty object, if first argument is not an object', () => {
     const cases = [
       undefined,
@@ -22,7 +25,7 @@ describe('omitKeys', () => {
     ]
 
     cases.forEach((testCase) => {
-      expect(omitKeys(testCase)).toEqual({})
+      expect(copyKeys(testCase)).toEqual({})
     })
   })
 
@@ -37,11 +40,11 @@ describe('omitKeys', () => {
     ]
 
     cases.forEach((testCase) => {
-      expect(omitKeys(testObject, testCase)).toEqual(testObject)
+      expect(copyKeys(testObject, testCase)).toEqual({})
     })
   })
 
-  it('should return copy of object without specified keys', () => {
-    expect(omitKeys(testObject, keys)).toEqual(result)
+  it('should return copy of object only with specified keys', () => {
+    expect(copyKeys(testObject, keys)).toEqual(result)
   })
 })

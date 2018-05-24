@@ -34,6 +34,7 @@ Tested javascript helpers.
 - [`dropRight`](https://github.com/bespoyasov/tools/tree/master/structures/dropRight)
 - [`getObjSize`](https://github.com/bespoyasov/tools/tree/master/structures/getObjSize)
 - [`omitKeys`](https://github.com/bespoyasov/tools/tree/master/structures/omitKeys)
+- [`copyKeys`](https://github.com/bespoyasov/tools/tree/master/structures/copyKeys)
 
 ### Text and numbers format
 - [`formatSum`](https://github.com/bespoyasov/tools/tree/master/format/formatSum)
