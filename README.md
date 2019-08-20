@@ -1,6 +1,6 @@
 # Tools
 
-Tested javascript helpers.
+Well tested atomic javascript util-functions.
 
 ## Table of contents
 
